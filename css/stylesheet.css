@@ -138,7 +138,8 @@ img {
     border: 0;
 }
 .img-right {
-    border: 0;
+	border: solid 2px #FAF0DB;
+	box-shadow: 0 0 5px rgba( 0,0,0,0.5 );
     float: right;
     margin-top: 5px;
     margin-left: 10px;
@@ -146,7 +147,8 @@ img {
 	width: 209px;
 }
 .img-left {
-	border: 0;
+	border: solid 2px #FAF0DB;
+	box-shadow: 0 0 5px rgba( 0,0,0,0.5 );
     float: left;
     margin-top: 5px;
     margin-left: 10px;
@@ -160,7 +162,7 @@ img {
 		'li general re'
 		'li info re'
 		'li plaatjes re';
-	grid-template-columns: 50px 1fr 50px;
+	grid-template-columns: 50px 1fr 70px;
 }
 .general {
 	grid-area: general;
