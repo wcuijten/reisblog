@@ -1,0 +1,229 @@
+/* --------------- Algemene opmaak ---------------------------*/
+:root {
+	--color-primary-numbers: #00FFFF;
+	--block-background: #4F9281;
+	--offset: 50px;
+	--text-color: #FAF0DB;
+}
+html {
+	font-family: 'Open Sans','Helvetica Neue',Arial,Helvetica,sans-serif;
+	font-size: 24px;
+}
+body {
+	margin:0;
+	padding:0;
+	position: relative;
+	display: grid;
+	grid-template-columns: auto 0px;
+	scroll-behavior: smooth;
+}
+figure {
+    display: block;
+}
+/* ----------- to top ---------- */
+.toTop {
+	/* ----------- to op positioning ----------------*/
+	position: sticky;
+	bottom: 20px;      
+	margin-right:10px; 
+	place-self: end;
+	margin-top: calc(100vh + var(--offset));
+	/*------- visual styling ------------- */
+	width:45px;
+	aspect-ratio:1;
+	background:#ff8b24;
+	border-radius:10px;
+}
+.toTop:before {
+    content:"";
+    position:absolute;
+    inset:30%;
+    transform:translateY(20%) rotate(-45deg);
+    border-top:5px solid #fff;
+    border-right:5px solid #fff;
+}
+
+/* ------------ Header -----------------*/
+.header-container {
+	position: relative;
+    background-position: center;
+    background-image: url('../images/gr221-stuwmeer-cuber-klein.webp');
+    background-size: cover;
+    max-width: 100%;
+	height: 350px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/* text in main image*/
+.main-img-txt {
+	color: white;
+	text-transform: uppercase;
+	font-weight: 900;
+    font-size: 1.5rem;
+    z-index: 1;
+    padding: 10px;
+
+}
+/* -------------NAV Menu ----------------- */
+.menu-bar {
+	background-color: black;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.logo {
+	width: 32px;
+	height: 27px;
+	margin-left: 10px;
+}
+.nav-menu {
+	color: white;
+	display: flex;
+	flex-flow: row wrap;
+	list-style-type: none;
+	gap: 10px;
+}
+.nav-menu li:hover {
+	background-color: antiquewhite;
+	color: orangered;
+}
+
+/* =========== Main =============== */
+/* --------------- inhoudsopgave ----------------*/
+.inhoudsopgave {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	font-size: 1.2rem;
+
+}
+.inhoudsopgave li a {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+/* -------- generieke opmaak images + caption + blokken-------- */
+.block {
+	position: relative;
+	padding: 20px 10px;
+	border: solid 4px #FAF0DB;
+	margin-bottom: 40px;
+	background-color: var(--block-background);
+	color: var(--text-color);
+	-webkit-box-shadow: 0 0 5px rgba( 0,0,0,0.5 );
+	-moz-box-shadow: 0 0 5px rgba( 0,0,0,0.5 );
+	box-shadow: 0 0 5px rgba( 0,0,0,0.5 );
+}
+.block p {
+	margin-bottom: 10px;
+}
+.time-distance {
+	display: block;
+	padding: 10px 0;
+	font-weight: bold;
+}
+figcaption {
+    background-color: #808000;
+    font-size: 85%;
+    padding: 3px;
+    margin-top: -5px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+.img-right {
+    border: 0;
+    float: right;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 2px;
+	width: 209px;
+}
+.img-left {
+	border: 0;
+    float: left;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 2px;
+	width: 209px;
+}
+/* ----------- main sections --------------- */
+.main-container {
+	display: grid;
+	grid-template-areas:
+		'li general re'
+		'li info re'
+		'li plaatjes re';
+	grid-template-columns: 50px 1fr 50px;
+}
+.general {
+	grid-area: general;
+}
+.info {
+	grid-area: info;
+}
+.plaatjes {
+	grid-area: plaatjes;
+}
+.banner {
+	padding: .5em .5em .5em 24px;
+	background: #164B73;
+	color: #FAF0DB;
+}
+.day {
+	color: var(--color-primary-numbers);
+	font-style: normal;
+}
+.day-title {
+	font-style: italic;
+	font-weight: bold;
+}
+table, th, td {
+	border: 2px solid black;
+	padding: 5px;
+	border-collapse: collapse;
+}
+table > caption {
+	border: 1px solid black;
+	background-color: #6495ED;
+}
+thead{
+	background-color: #6495ED;
+	color: white;
+}
+/* ----- de route GPX en afbeelding------ */
+.maps {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	max-width: 100%;
+	gap: 10px;
+}
+#routekaart , #gpx {
+	max-width: 619px;
+}
+
+
+@media only screen and (max-width: 750px) {
+	figure {
+		display: none;
+	}
+	#routekaart, #gpx {
+		display: block;
+	}
+	header {
+		font-size: 0.8rem;
+	}
+	.main-container {
+		display: flex;
+		flex-direction: column;
+		padding: 0 20px;
+	}
+}
+
