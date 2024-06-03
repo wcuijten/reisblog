@@ -102,6 +102,10 @@ figure {
 	background-color: antiquewhite;
 	color: orangered;
 }
+.mobile-menu, .sub-menu  {
+	display: none;
+}
+
 
 /* =========== Main =============== */
 /* --------------- inhoudsopgave ----------------*/
@@ -241,6 +245,25 @@ thead{
 		display: flex;
 		flex-direction: column;
 		padding: 0 20px;
+	}
+	.mobile-menu {
+		display: block;
+		justify-content: space-between;
+	}
+	.desktop {
+		display: none;
+	}
+	.sub-menu {
+		list-style-type: none;
+		display: none;
+	}
+	.sub-menu:active {
+		display: block;
+	}
+
+	.sub-menu a {
+		text-decoration: none;
+		color: white;
 	}
 }
 
