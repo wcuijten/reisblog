@@ -102,7 +102,7 @@ figure {
 	background-color: antiquewhite;
 	color: orangered;
 }
-.mobile-menu, .sub-menu  {
+.toggle {
 	display: none;
 }
 
@@ -246,22 +246,17 @@ thead{
 		flex-direction: column;
 		padding: 0 20px;
 	}
-	.mobile-menu {
+	.nav-menu {
 		display: block;
 		justify-content: space-between;
+		list-style-type: none;
+		display: none;
 	}
 	.desktop {
 		display: none;
 	}
-	.sub-menu {
-		list-style-type: none;
-		display: none;
-	}
-	.sub-menu:active {
-		display: block;
-	}
 
-	.sub-menu a {
+	.nav-menu > li > a {
 		text-decoration: none;
 		color: white;
 	}
