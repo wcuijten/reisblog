@@ -247,7 +247,7 @@ thead{
 		padding: 0 20px;
 	}
 	.nav-menu {
-		display: block;
+		/* display: block; */
 		justify-content: space-between;
 		list-style-type: none;
 		display: none;
