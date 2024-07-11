@@ -1,0 +1,30 @@
+@use "variables" as vars;
+
+/* ------------ Header -----------------*/
+.header-container {
+	position: relative;
+    background-position: center;
+    background-image: url('../#{vars.$imageLocation}/gr221-stuwmeer-cuber-klein.webp');
+    background-size: cover;
+	height: 350px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%; /* Ensure the width does not cause overflow */
+    box-sizing: border-box; /* Include padding and border in width/height calculations */
+}
+/* text in main image*/
+.main-img-txt {
+	color: white;
+	text-transform: uppercase;
+	font-weight: 900;
+    font-size: #{vars.$h1Fontsize};
+    z-index: 1;
+	word-wrap: break-word;
+	// text-align: center;
+    max-width: 100%; /* Ensure text does not cause overflow */
+    padding: 0 1.5rem; /* Add padding to avoid text touching edges */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}

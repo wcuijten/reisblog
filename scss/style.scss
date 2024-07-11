@@ -1,0 +1,44 @@
+// ------------ imports -----------------
+@use "variables" as vars;
+@use "header";
+@use "toTop";
+@use "navMenu";
+@use "footer";
+@use "contentBlocks";
+@use "mobile";
+
+// algemene opmaak
+html {
+	font-family: 'Open Sans','Helvetica Neue',Arial,Helvetica,sans-serif;
+	font-size: 22px;
+}
+body {
+	margin:0;
+	padding:0;
+	position: relative;
+	display: grid;
+	grid-template-columns: auto 0px;
+	scroll-behavior: smooth;
+}
+figure {
+    display: block;
+}
+h1 {
+	font-size: vars.$h1Fontsize;
+}
+h2 {
+	font-size: vars.$h2Fontsize;
+}
+h3 {
+	font-size: vars.$h3Fontsize;
+}
+p {
+    ul > {
+        li > {
+            a {
+	            font-size: vars.$pFontsize;
+            }
+        }
+    }
+}
+

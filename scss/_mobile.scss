@@ -1,0 +1,56 @@
+@use "variables" as vars;
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++
+--------- mobile ----------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media all and (max-width: 750px) {
+    .main-container {
+		display: flex;
+		flex-direction: column;
+		padding: 0 20px;
+	}
+    // navigatie (hamburger)
+    .nav-menu {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+        flex-direction: row;
+	}
+	.nav-enu li a {
+		display: block;
+		padding: 15px 5px;
+	}
+	.item {
+		order: 2;
+		max-width: 100%;
+		text-align: center;
+		display: none;
+	}
+    .logo {
+        order: 1;
+        flex: 1;
+    }
+	.toggle {
+        flex: 1;
+        order: 3;
+    }
+
+	/* The .menu-active class is not in the HTML code, we will dynamically add it with JavaScript. */
+	.menu-active {
+		background-color: #111;
+		border-radius: 3px;
+	}
+	/* The .active class is not in the HTML code, we will dynamically add it with JavaScript. */
+	.active .item {
+		display: block;
+	}
+// kaartjes en foto's
+	figure {
+		display: none;
+	}
+	#routekaart, #gpx {
+		display: block;
+	}
+}

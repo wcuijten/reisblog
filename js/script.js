@@ -28,31 +28,31 @@ toggle.addEventListener("click", toggleMenu, false);
 
 
 /* Activate Submenu */
-// function toggleItem(e) {
-//     if (this.classList.contains("submenu-active")) {
-//         e.stopPropagation();
-//         this.classList.remove("submenu-active");
-//     } else if (menu.querySelector(":scope > .submenu-active")) {
-//         menu.querySelector(":scope > .submenu-active").classList.remove("submenu-active"); 
-//         this.classList.add("submenu-active");
-//     } else {
-//         this.classList.add("submenu-active");
-//     }
-// }
+function toggleItem(e) {
+    if (this.classList.contains("menu-active")) {
+        e.stopPropagation();
+        this.classList.remove("menu-active");
+    } else if (menu.querySelector(":scope > .menu-active")) {
+        menu.querySelector(":scope > menu-active").classList.remove("menu-active"); 
+        this.classList.add("menu-active");
+    } else {
+        this.classList.add("menu-active");
+    }
+}
 
 /* Event Listeners */
-// for (let item of items) {
-//     if (item.querySelector(".submenu")) {
-//         item.addEventListener("click", toggleItem, false);
-//         item.addEventListener("keypress", toggleItem, false);
-//     }   
-// }
+for (let item of items) {
+    if (item.querySelector(".nav-menu")) {
+        item.addEventListener("click", toggleItem, false);
+        item.addEventListener("keypress", toggleItem, false);
+    }   
+}
 /* Close Submenu From Anywhere */
 function closeSubmenu(e) {
-    if (menu.querySelector(".submenu-active")) {
-        let isClickInside = menu.querySelector(".submenu-active").contains(e.target);
-        if (!isClickInside && menu.querySelector(".submenu-active")) {
-        menu.querySelector(".submenu-active").classList.remove("submenu-active");
+    if (menu.querySelector(".menu-active")) {
+        let isClickInside = menu.querySelector(".menu-active").contains(e.target);
+        if (!isClickInside && menu.querySelector(".menu-active")) {
+        menu.querySelector(".menu-active").classList.remove("menu-active");
         }
     }
 }

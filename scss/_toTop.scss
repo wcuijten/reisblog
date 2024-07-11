@@ -1,0 +1,28 @@
+@use "variables" as vars;
+
+@use "sass:math";
+
+/* ----------- to top ---------- */
+.toTop {
+	/* ----------- to op positioning ----------------*/
+	position: sticky;
+	bottom: 20px;      
+	margin-right: 10px; 
+	place-self: end;
+	margin-top: calc(100vh + #{vars.$offset});
+	/*------- visual styling ------------- */
+	width: 45px;
+	aspect-ratio: 1;
+	background: #ff8b24;
+	border-radius: 10px;
+}
+.toTop {
+    &:before {
+    content: "";
+    position: absolute;
+    inset: 30%;
+    transform: translateY(20%) rotate(-45deg);
+    border-top: 5px solid #fff;
+    border-right: 5px solid #fff;
+    }
+}
