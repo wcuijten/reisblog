@@ -1,3 +1,3 @@
 Voor als je iets wil aanpassen dat niet in de scrum staat, dat Wim die kan goedkeuren en in het scrum bord kan zetten
 
-- de menu bar zit niet bovenaan de pagina als je naar beneden scrollt: komt waarschijnlijk door de margin op de ul class="nav-menu"
+- de menu bar zit niet bovenaan de pagina als je naar beneden scrollt: komt waarschijnlijk door de margin op de ul class="nav-menu" --done

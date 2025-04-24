@@ -56,3 +56,52 @@ function closeSubmenu(e) {
         }
     }
 }
+
+// ----------- image slider -----------------------
+
+const slides = document.querySelectorAll(".slider img"); //Hier zat de fout, ".slides" moest ".slider" zijn.
+
+let slideIndex = 0;
+let intervalId = null;
+
+// if you want to wait for the DOM content to load:
+document.addEventListener("DOMContentLoaded", initializeSlider);
+
+function initializeSlider(){
+
+    if(slides.length > 0){
+        slides[slideIndex].classList.add("displaySlide");
+        intervalId = setInterval(nextSlide, 5000);
+        // cl(intervalId);
+    }
+}
+
+function showSlide(index){
+
+    if(index >= slides.length){
+        slideIndex = 0;
+    }
+    else if(index < 0){
+        slideIndex = slides.length - 1;
+    }
+
+    slides.forEach(slide => {
+        slide.classList.remove("displaySlide");
+    });
+    slides[slideIndex].classList.add("displaySlide");
+    intervalId = setInterval(nextSlide, 5000); //interval werd niet meer toegevoegd na het verwijderen.
+}
+// pressing prevslide button
+function prevSlide(){
+    clearInterval(intervalId); // this will pauze (clear the interval id)
+    slideIndex--;
+    showSlide(slideIndex);
+}
+// pressing nextslide button
+function nextSlide(){
+    clearInterval(intervalId); //pauzeert nu ook na nextslide()
+    slideIndex++;
+    showSlide(slideIndex);
+}
+
+

@@ -6,11 +6,14 @@
 @use "footer";
 @use "contentBlocks";
 @use "mobile";
+@use "slider";
+@use "desktop";
 
 // algemene opmaak
 html {
 	font-family: 'Open Sans','Helvetica Neue',Arial,Helvetica,sans-serif;
 	font-size: 22px;
+	scroll-behavior: smooth; //scroll stond in het body element, maar dat is niet het element dat scrollt dus smooth had geen effect.
 }
 body {
 	margin:0;
@@ -18,7 +21,6 @@ body {
 	position: relative;
 	display: grid;
 	grid-template-columns: auto 0px;
-	scroll-behavior: smooth;
 }
 figure {
     display: block;
@@ -36,9 +38,8 @@ p {
     ul > {
         li > {
             a {
-	            font-size: vars.$pFontsize;
+	        	font-size: vars.$pFontsize;
             }
         }
     }
 }
-
